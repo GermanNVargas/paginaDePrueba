@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', mainRouter); 
 app.use('/products', productsRouter); 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("El servidor está corriendo en el puerto 3000");
     console.log("-------------------");
     console.log("http://localhost:3000");
