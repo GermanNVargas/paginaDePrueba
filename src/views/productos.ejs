@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {title: "Productos"})  %> 
+
+<body>
+    <%- include('partials/header') %> 
+
+    <main>
+
+        <section class="hero">
+            <h1>Productos</h1>
+        </section>
+
+        <section class="cards">
+           <% for (let i = 0; i < productosEnLaVista.length; i++) { %>
+            <article>
+                <h2>ID del producto: <%= productosEnLaVista[i].id %></h2>
+                <button>Más info</button>
+            </article>
+            <% } %> 
+
+        </section>
+
+    </main>
+    <%- include('partials/footer')  %> 
+</body>
+</html>
